@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="801.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers_Tabs.TvShowsTabController">
+         <children>
+            <TableView fx:id="tvShowTable" layoutY="14.0" maxWidth="400.0" minHeight="200.0" minWidth="400.0" onMouseClicked="#handleSelectedRowTVShow" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="587.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+              <columns>
+                <TableColumn fx:id="titleColumnTVShow" prefWidth="446.40001755952835" text="Title" />
+                <TableColumn fx:id="genreColumnTVShow" prefWidth="192.0" text="Gener" />
+                  <TableColumn fx:id="releaseDateColumnTVShow" prefWidth="362.4000244140625" text="Release Date" />
+              </columns>
+            </TableView>
+            <TableView fx:id="episodesTable" layoutX="-1.0" layoutY="494.0" maxWidth="400.0" minHeight="200.0" minWidth="400.0" prefHeight="142.0" prefWidth="600.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="494.0">
+              <columns>
+                <TableColumn fx:id="episodeNumberColumnEpisode" prefWidth="102.0" text="Episode Number" />
+                <TableColumn fx:id="titleColumnEpisode" prefWidth="487.2000198364258" text="Title" />
+                  <TableColumn fx:id="durationColumnEpisode" prefWidth="187.20001220703125" text="Duration" />
+                  <TableColumn fx:id="airDateColumnEpisode" prefWidth="219.20001220703125" text="Air Date" />
+              </columns>
+            </TableView>
+            <TableView fx:id="seasonsTable" layoutX="-1.0" layoutY="254.0" maxWidth="400.0" minHeight="200.0" minWidth="400.0" onMouseClicked="#handleSelectedRowSeason" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="254.0">
+              <columns>
+                <TableColumn fx:id="seasonColumnSeasons" prefWidth="451.9999809265137" text="Season" />
+                <TableColumn fx:id="airDateColumnSeasons" prefWidth="191.20001220703125" text="AirDate" />
+                  <TableColumn fx:id="episodeAmountColumnSeasons" prefWidth="356.00006103515625" text="Amount of Episodes " />
+              </columns>
+            </TableView>
+      <ButtonBar layoutX="732.0" layoutY="214.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.rightAnchor="10.0">
+        <buttons>
+                  <Button fx:id="AddTvShowsButton"  mnemonicParsing="false" onMouseClicked="#handleAddButtonTvShows" text="Add" />
+                  <Button fx:id="EditTvShowsButton" mnemonicParsing="false" onMouseClicked="#handleEditButtonTvShows" text="Edit" />
+                  <Button fx:id="RemoveTvShowsButton" mnemonicParsing="false" onMouseClicked="#handleRemoveTvShowsButton" text="Remove" />
+        </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="732.0" layoutY="454.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.rightAnchor="10.0">
+         <buttons>
+            <Button fx:id="AddSeasonsButton" mnemonicParsing="false" onMouseClicked="#handleAddButtonSeasons" text="Add" />
+            <Button fx:id="EditSeasonsButton" mnemonicParsing="false" onMouseClicked="#handleEditButtonSeasons" text="Edit" />
+            <Button fx:id="RemoveSeasonsButton" mnemonicParsing="false" onMouseClicked="#handleRemoveSeasonsButton" text="Remove" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="731.0" layoutY="694.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.rightAnchor="10.0">
+         <buttons>
+            <Button fx:id="AddEpisodeButton" mnemonicParsing="false" onMouseClicked="#handleAddButtonEpisodes" text="Add" />
+            <Button fx:id="EditEpisodeButton" mnemonicParsing="false" onMouseClicked="#handleEditButtonEpisodes" text="Edit" />
+            <Button fx:id="RemoveEpisodeButton" mnemonicParsing="false" onMouseClicked="#handleRemoveEpisodeButton" text="Remove" />
+         </buttons>
+      </ButtonBar>
+         </children>
+      </AnchorPane>

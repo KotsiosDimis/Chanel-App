@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="763.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers_Tabs.AdsTabController">
+         <children>
+            <TableView fx:id="advertiserTable" layoutX="96.0" layoutY="28.0" onMouseClicked="#handleSelectedRowAdvertiser" prefHeight="200.0" prefWidth="760.0">
+              <columns>
+                <TableColumn fx:id="companyNameColumnAdvertiser" prefWidth="159.19998168945312" text="CompanyName" />
+                <TableColumn fx:id="ContactPersonColumnAdvertiser" prefWidth="166.40003967285156" text="Contact Person" />
+                  <TableColumn fx:id="phoneColumnAdvertiser" prefWidth="134.4000244140625" text="Phone Number" />
+                  <TableColumn fx:id="emailColumnAdvertiser" prefWidth="177.5999755859375" text="Email" />
+              </columns>
+            </TableView>
+            <TableView fx:id="adsTable" layoutX="96.0" layoutY="337.0" prefHeight="200.0" prefWidth="747.0">
+              <columns>
+              <TableColumn fx:id="adIdColumn" prefWidth="50.0" text="Ad ID" />
+                <TableColumn fx:id="adNameColumnAds" prefWidth="453.59996032714844" text="Ad Name" />
+                <TableColumn fx:id="durationColumnAds" prefWidth="131.2000732421875" text="Duration In Seconds" />
+                  <TableColumn fx:id="startDateColumnAds" prefWidth="163.2000732421875" text="Start Date" />
+              </columns>
+            </TableView>
+            <ButtonBar fx:id="advertiserButtonsBar" layoutX="591.0" layoutY="228.0" prefHeight="42.0" prefWidth="226.0">
+              <buttons>
+                <Button fx:id="AddAdvertiserButtons" mnemonicParsing="false" onMouseClicked="#handleAddButtonAdvertisers" text="Add" />
+                  <Button fx:id="EditAdvertiserButtons" mnemonicParsing="false" onMouseClicked="#handleEditButtonAdvertisers" text="Edit" />
+                  <Button fx:id="RemoveAdvertiserButtons" mnemonicParsing="false" onMouseClicked="#handleRemoveButtonAdvertisers" text="Remove" />
+              </buttons>
+            </ButtonBar>
+      <ButtonBar fx:id="advertiserButtonsBar1" layoutX="591.0" layoutY="537.0" prefHeight="42.0" prefWidth="226.0">
+         <buttons>
+            <Button fx:id="AddAdsButtons" mnemonicParsing="false" onMouseClicked="#handleAddButtonAds" text="Add" />
+            <Button fx:id="EditAdsButtons" mnemonicParsing="false" onMouseClicked="#handleEditButtonAds" text="Edit" />
+            <Button fx:id="RemoveAdsButtons" mnemonicParsing="false" onMouseClicked="#handleRemoveButtonAds" text="Remove" />
+         </buttons>
+      </ButtonBar>
+         </children>
+      </AnchorPane>
